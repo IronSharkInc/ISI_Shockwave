@@ -1,0 +1,4 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text
+
+modMeleeStunBatonCharger,item_modifiers,Mod,,,Stun Baton Charger Mod,
+modMeleeStunBatonChargerDesc,item_modifiers,Mod,,,Install this mod into a melee weapon to shock zombies on the charged hit.,

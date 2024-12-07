@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="ISI-Shockwave" />
+	<DisplayName value="ISI Shockwave" />
+	<Version value="1.1.0.0" />
+	<Description value="
+		Adds a Charger mod that can be installed in any melee weapon to duplicate the stun baton's shock effect. 
+		Modifies the Repulsor mod so it can be installed in any melee weapon. The Charger mod must also be installed for the ragdoll effect to trigger.
+	" />
+	<Author value="IronSharkInc" />
+	<Website value="https://github.com/IronSharkInc" />
+</xml>

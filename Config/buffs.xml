@@ -1,0 +1,8 @@
+<buffs>
+    <insertAfter xpath="//buffs/buff[@name='buffmodMeleeStunBatonRepulsor']">
+        <buff name="buffmodMeleeStunBatonCharger" hidden="true">
+            <stack_type value="ignore" />
+            <duration value="0" />
+        </buff>
+    </insertAfter>
+</buffs>

@@ -1,0 +1,7 @@
+<traders>
+    <!-- Allow trader to sell repulsor and charger mods -->
+    <append xpath="//traders/trader_item_groups/trader_item_group[@name='groupMeleeMods']">
+        <item name="modMeleeStunBatonRepulsor" />
+        <item name="modMeleeStunBatonCharger" />
+    </append>
+</traders>

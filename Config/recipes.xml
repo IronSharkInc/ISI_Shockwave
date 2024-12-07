@@ -1,0 +1,12 @@
+<recipes>
+    <!-- Recipe for crafting charger mods -->
+    <insertAfter xpath="//recipes/recipe[@name='modMeleeStunBatonRepulsor']">
+        <recipe name="modMeleeStunBatonCharger" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+            <ingredient name="carBattery" count="1" />
+            <ingredient name="resourceForgedSteel" count="5" />
+            <ingredient name="resourceDuctTape" count="5" />
+            <ingredient name="resourceElectricParts" count="10" />
+            <ingredient name="resourceMechanicalParts" count="5" />
+        </recipe>
+    </insertAfter>
+</recipes>

@@ -1,0 +1,13 @@
+<loot>
+    <!-- Add repulsor and charger mods to "Mo' Power" box -->
+    <append xpath="//lootcontainers/lootgroup[@name='groupStunBaton']">
+        <item name="modMeleeStunBatonRepulsor" loot_prob_template="med" />
+        <item name="modMeleeStunBatonCharger" loot_prob_template="med" />
+    </append>
+
+    <!-- Add repulsor and charger mods to t2 meleee mods loot group -->
+    <append xpath="//lootcontainers/lootgroup[@name='modMeleeT2']">
+        <item name="modMeleeStunBatonRepulsor" />
+        <item name="modMeleeStunBatonCharger" />
+    </append>
+</loot>
