@@ -1,4 +1,4 @@
-# ISI Mods Unbound
+# ISI Shockwave
 
 A 7 Days to Die (7D2D) mod that adds a Charger mod, which replicates the shock effect of the stun baton. This mod allows both the Charger and Repulsor mods to be installed on any melee weapon. The Charger mod must be equipped for the Repulsor mod's ragdoll effect to activate.
 
