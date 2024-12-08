@@ -1,8 +1,11 @@
 <config>
     <!-- Add shock and stun effects to every melee weapon. Only activates if the appropriate mods are installed. -->
     <append xpath="//items/item[
-        starts-with(@name, 'meleeWpn') 
-        or starts-with(@name, 'meleeTool')
+        (
+            starts-with(@name, 'meleeWpn') 
+            or starts-with(@name, 'meleeTool')
+        )
+        and not(contains(@name, 'Parts'))
     ]">
         <effect_group name="charge">
             <!-- ~~~CHARGER~~~ -->
