@@ -1,0 +1,4 @@
+<!-- Allows players to install Repulsor mod on ranged weapons (i.e., ragdoll from range) -->
+<configs>
+    <append xpath="//item_modifiers/item_modifier[@name='modMeleeStunBatonRepulsor']/@installable_tags">,ranged</append>
+</configs>

@@ -1,0 +1,6 @@
+<!-- Prevents the stun duration increase from electrocutioner perk from applying to ranged weapons. -->
+<configs>
+    <append xpath="//item_modifier[@name='modMeleeStunBatonCharger']/effect_group[@name='extend shock duration']">
+        <requirement name="ItemHasTags" tags="melee" />
+    </append>
+</configs>

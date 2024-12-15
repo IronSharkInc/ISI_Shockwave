@@ -1,19 +1,14 @@
 <configs>
-    <!-- Allow replusor mods to be installed in any melee weapon -->
-    <append xpath="//item_modifiers/item_modifier[@name='modMeleeStunBatonRepulsor']/@installable_tags">,melee</append>
+    <!-- required -->
+    <include filename="item_modifiers/move_shock_to_mod.xml" />
+    <include filename="item_modifiers/move_repulsion_to_mod.xml" />
 
-    <!-- Create charger mod -->
-    <insertAfter xpath="//item_modifiers/item_modifier[@name='modMeleeStunBatonRepulsor']">
-        <item_modifier name="modMeleeStunBatonCharger" installable_tags="melee" modifier_tags="shock" blocked_tags="noMods" type="attachment">
-            <property name="Extends" value="modGeneralMaster" />
-            <property name="CustomIcon" value="carBattery" />
-            <property name="UnlockedBy" value="perkTechJunkie5Repulsor" />
-            <property name="TraderStageTemplate" value="modsTier2" />
-            <effect_group tiered="false">
-                <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffmodMeleeStunBatonCharger" />
-                <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffmodMeleeStunBatonCharger" />
-            </effect_group>
-        </item_modifier>
-    </insertAfter>
+    <!-- optional -->
+    <!-- comment a line out to disable that feature -->
+    <include filename="item_modifiers/tech_junkie_six_grants_chance_to_charge_instantly.xml" />
+    <include filename="item_modifiers/electrocutioner_extends_duration.xml" />
+    <include filename="item_modifiers/make_duration_extension_melee_only.xml" />
 
+    <include filename="item_modifiers/allow_charger_to_be_installed_in_ranged_weapons.xml" />
+    <!-- <include filename="item_modifiers/allow_repulsor_to_be_installed_in_ranged_weapons.xml" /> -->
 </configs>

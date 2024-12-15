@@ -1,0 +1,48 @@
+<configs>
+    <!-- Allow replusor mods to be installed in any melee weapon -->
+    <append xpath="//item_modifiers/item_modifier[@name='modMeleeStunBatonRepulsor']/@installable_tags">,melee</append>
+
+    <!-- Add repulsion effect to mod instead of item -->
+    <append xpath="//item_modifiers/item_modifier[@name='modMeleeStunBatonRepulsor']">
+        
+        <effect_group name="ragdoll effect" tiered="false">
+
+            <!-- Do not allow this to affect the stun baton -->
+            <requirement name="!ItemHasTags" tags="stunBaton"/>
+            
+            <!-- Charger mod must be installed or this won't do anything -->
+            <requirement name="HasBuff" buff="buffmodMeleeStunBatonCharger"/> 
+
+            <!-- Ragdoll Target -->
+            <triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="@shockDuration" force="350">
+                <requirement name="CompareItemMetaFloat" operation="GTE" value="5" key="charges"/>
+            </triggered_effect>
+
+            <!-- Ragdoll AOE -->
+            <triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="otherAOE" range="1.1" duration="2.5" force="350" target_tags="zombie,animal">
+                <requirement name="!IsSecondaryAttack"/>
+                <requirement name="!HasBuff" buff="buffDrugNerdTats"/>
+                <requirement name="CompareItemMetaFloat" operation="GTE" value="5" key="charges"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="otherAOE" range="1.3" duration="2.5" force="350" target_tags="zombie,animal">
+                <requirement name="IsSecondaryAttack"/>
+                <requirement name="!HasBuff" buff="buffDrugNerdTats"/>
+                <requirement name="CompareItemMetaFloat" operation="GTE" value="5" key="charges"/>
+            </triggered_effect>
+
+            <!-- Nerd Tats: Ragdoll AOE duration = Shock duration -->
+            <triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="otherAOE" range="1.1" duration="@shockDuration" force="350" target_tags="zombie,animal">
+                <requirement name="!IsSecondaryAttack"/>
+                <requirement name="HasBuff" buff="buffDrugNerdTats"/>
+                <requirement name="CompareItemMetaFloat" operation="GTE" value="5" key="charges"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="otherAOE" range="1.3" duration="@shockDuration" force="350" target_tags="zombie,animal">
+                <requirement name="IsSecondaryAttack"/>
+                <requirement name="HasBuff" buff="buffDrugNerdTats"/>
+                <requirement name="CompareItemMetaFloat" operation="GTE" value="5" key="charges"/>
+            </triggered_effect>
+            
+        </effect_group> 
+    </append>
+
+</configs>

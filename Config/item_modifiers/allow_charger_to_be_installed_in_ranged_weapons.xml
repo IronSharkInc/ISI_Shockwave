@@ -1,0 +1,4 @@
+<!-- Allows players to install Charger mod on ranged weapons (i.e., shock from range) -->
+<configs>
+    <append xpath="//item_modifiers/item_modifier[@name='modMeleeStunBatonCharger']/@installable_tags">,ranged</append>
+</configs>

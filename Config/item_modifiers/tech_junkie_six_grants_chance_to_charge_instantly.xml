@@ -1,0 +1,25 @@
+<configs>
+    <insertAfter xpath="//ISI_chance_to_charge_instantly">
+        
+        <!-- primary attacks have a 25% chance to instantly charge -->
+        <triggered_effect trigger="onSelfAttackedOther" action="SetItemMetaFloat" change="4" relative="false" key="charges" >
+            <requirement name="ProgressionLevel" progression_name="perkTechJunkie6BatonCharge" operation="Equals" value="1"/>
+            <requirement name="CompareItemMetaFloat" operation="LTE" value="3" key="charges"/>
+            <requirement name="!IsSecondaryAttack"/>
+            <requirement name="IsAlive" target="other"/>
+			<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+            <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+        </triggered_effect> 
+        
+        <!-- power attacks have a 50% chance to charge (note: ranged weapons do not have a power attack) -->
+        <triggered_effect trigger="onSelfAttackedOther" action="SetItemMetaFloat" change="4" relative="false" key="charges" >
+            <requirement name="ProgressionLevel" progression_name="perkTechJunkie6BatonCharge" operation="Equals" value="1"/>
+            <requirement name="CompareItemMetaFloat" operation="LTE" value="3" key="charges"/>
+            <requirement name="IsSecondaryAttack"/>
+            <requirement name="IsAlive" target="other"/>
+			<requirement name="!EntityTagCompare" target="other" tags="trader"/>
+            <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+        </triggered_effect> 
+        
+    </insertAfter>
+</configs>

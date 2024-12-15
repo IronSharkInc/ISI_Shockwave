@@ -1,0 +1,26 @@
+<!-- shock/ragdoll for longer based on levels in electrocutioner perk (4-8 seconds) -->
+<configs>
+    <insertafter xpath="//item_modifier[@name='modMeleeStunBatonCharger']/effect_group[@name='default shock duration']">
+        <effect_group name="extend shock duration">
+            <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="shockDuration" operation="set" value="4">
+                <requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="0"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="shockDuration" operation="set" value="4.8">
+                <requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="1"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="shockDuration" operation="set" value="5.6">
+                <requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="2"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="shockDuration" operation="set" value="6.4">
+                <requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="3"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="shockDuration" operation="set" value="7.2">
+                <requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="4"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="shockDuration" operation="set" value="8">
+                <requirement name="ProgressionLevel" progression_name="perkElectrocutioner" operation="Equals" value="5"/>
+            </triggered_effect>
+        </effect_group>
+
+    </insertafter>
+</configs>
