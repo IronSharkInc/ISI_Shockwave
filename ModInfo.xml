@@ -2,7 +2,7 @@
 <xml>
 	<Name value="ISI-Shockwave" />
 	<DisplayName value="ISI Shockwave" />
-	<Version value="1.1.2.0" />
+	<Version value="1.1.1.0" />
 	<Description value="
 		Adds a Charger mod that can be installed in any weapon to duplicate the stun baton's shock effect. 
 		Modifies the Repulsor mod so it can be installed in any weapon. The Charger mod must also be installed for the repulsion effect to trigger.

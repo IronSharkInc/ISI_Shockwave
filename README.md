@@ -4,7 +4,7 @@ A 7 Days to Die (7D2D) mod that adds a Charger mod, which replicates the shock e
 
 <!-- TODO v2 notes -->
 
-## 1.1.2.0
+## 1.1.1.0
 
 - now works properly on sledge turrets
 - more obvious when weapon is charged (stun baton's charged sound + more visible sparks)
