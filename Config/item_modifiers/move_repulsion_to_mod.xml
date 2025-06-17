@@ -2,6 +2,9 @@
     <!-- Allow replusor mods to be installed in any melee weapon -->
     <append xpath="//item_modifiers/item_modifier[@name='modMeleeStunBatonRepulsor']/@installable_tags">,melee</append>
 
+    <!-- Override blocked tags so repulsor can be installed on pipe baton -->
+    <set xpath="//item_modifiers/item_modifier[@name='modMeleeStunBatonRepulsor']/@blocked_tags">noMods</set>
+
     <!-- Add repulsion effect to mod instead of item -->
     <append xpath="//item_modifiers/item_modifier[@name='modMeleeStunBatonRepulsor']">
         

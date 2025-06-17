@@ -52,15 +52,12 @@
                 </triggered_effect>
 
                 <!-- Show sparks when charged -->
-                <triggered_effect trigger="onSelfEquipStart" action="AddPart" part="Sparks" prefab="@:ParticleEffects/p_electric_shock_small.prefab" parentTransform="#HeldItemRoot">
+                <triggered_effect trigger="onSelfEquipStart" action="AddPart" part="Sparks" prefab="@:ParticleEffects/p_electric_shock_small.prefab" parentTransform="#HeldItemRoot" localPos="0,0,0" localRot="0,0,0">
                     <requirement name="CompareItemMetaFloat" operation="Equals" value="4" key="charges"/>
                 </triggered_effect>
-                <triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Sparks" prefab="@:ParticleEffects/p_electric_shock_small.prefab" parentTransform="#HeldItemRoot">
+                <triggered_effect trigger="onSelfAttackedOther" action="AddPart" part="Sparks" prefab="@:ParticleEffects/p_electric_shock_small.prefab" parentTransform="#HeldItemRoot" localPos="0,0,0" localRot="0,0,0">
 			        <requirement name="CompareItemMetaFloat" operation="Equals" value="4" key="charges"/>
                 </triggered_effect>
-                
-                <!-- <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="shockDuration" operation="set" value="4" /> -->
-                <!-- <ISI_shock_duration /> -->
 
                 <!-- Shock -->
                 <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffShocked" duration="@shockDuration" >
