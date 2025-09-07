@@ -89,7 +89,7 @@
 
     </insertAfter>
 
-    <insertAfter xpath="//logger">
+    <!-- <insertAfter xpath="//logger">
         <triggered_effect trigger="onSelfAttackedOther" action="LogMessage" message="~~~ISI: less than 0~~~">
             <requirement name="CompareItemMetaFloat" operation="LT" value="0" key="charges"/>
         </triggered_effect>
@@ -111,6 +111,6 @@
         <triggered_effect trigger="onSelfAttackedOther" action="LogMessage" message="~~~ISI: greater than 5~~~">
             <requirement name="CompareItemMetaFloat" operation="GT" value="5" key="charges"/>
         </triggered_effect>
-    </insertAfter>
+    </insertAfter> -->
 
 </configs>
