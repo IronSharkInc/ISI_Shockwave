@@ -8,7 +8,9 @@
     <include filename="item_modifiers/tech_junkie_six_grants_chance_to_charge_instantly.xml" />
     <include filename="item_modifiers/electrocutioner_extends_duration.xml" />
     <include filename="item_modifiers/make_duration_extension_melee_only.xml" />
+    <include filename="item_modifiers/intellect_mastery_4_and_5.xml" />
 
+    <!-- melee/ranged -->
     <include filename="item_modifiers/allow_charger_to_be_installed_in_ranged_weapons.xml" />
     <!-- <include filename="item_modifiers/allow_repulsor_to_be_installed_in_ranged_weapons.xml" /> -->
 </configs>

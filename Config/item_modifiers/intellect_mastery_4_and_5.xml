@@ -1,0 +1,26 @@
+<configs>
+    
+    <insertAfter xpath="//ISI_intellect_mastery_4_and_5">
+        <!-- perkIntellectMastery level 4 allows only 2 hits to charge -->
+        <triggered_effect trigger="onSelfAttackedOther" action="SetItemMetaFloat" change="4" relative="false" key="charges" >
+            <requirement name="ProgressionLevel" progression_name="perkIntellectMastery" operation="GTE" value="4"/>
+            <requirement name="CompareItemMetaFloat" operation="LTE" value="3" key="charges"/>
+            <requirement name="IsAlive" target="other"/>
+            <requirement name="!EntityTagCompare" target="other" tags="trader"/>
+        </triggered_effect> 
+        
+        <!-- perkIntellectMastery level 5 keeps baton charged and ready at all times -->
+        <triggered_effect trigger="onSelfAttackedOther" action="SetItemMetaFloat" change="4" relative="false" key="charges" >
+            <requirement name="ProgressionLevel" progression_name="perkIntellectMastery" operation="GTE" value="5"/>
+            <requirement name="CompareItemMetaFloat" operation="LTE" value="4" key="charges"/>
+            <requirement name="IsAlive" target="other"/>
+            <requirement name="!EntityTagCompare" target="other" tags="trader"/>
+        </triggered_effect> 
+    </insertAfter>
+
+    <!-- this tag is used to disable resetting sparks and charge between attacks -->
+    <insertAfter xpath="//ISI_intellect_mastery_always_charged">
+        <requirement name="ProgressionLevel" progression_name="perkIntellectMastery" operation="LT" value="5"/>
+    </insertAfter>
+
+</configs>
