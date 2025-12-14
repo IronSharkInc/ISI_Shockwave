@@ -33,8 +33,24 @@ A 7 Days to Die (7D2D) mod that adds a Charger mod, which replicates the shock e
   - More force?
   - Increase buff time?
 
-## My Other Mods
+## Testing
 
-If you like this mod, you might like my other mods:
+1. **Basic Functionality**
+   - Install Charger mod on a melee weapon
+   - Install Charger mod on a ranged weapon
+   - Attack zombies to verify shock effect triggers
+   - Confirm charged sound and visual effects appear
 
-<https://next.nexusmods.com/profile/IronSharkInc/mods?gameId=1059>
+2. **Repulsor Integration**
+   - Add Repulsor mods to melee weapon
+   - Verify ragdoll effect only activates when Charger is equipped
+
+3. **Sledge Turret Compatibility**
+   - Install mods on sledge turret
+   - Confirm shock effects work on automated attacks
+
+4. **Perk Interactions**
+   - Confirm reading Tech Junkie Vol 5 unlocks charger and repulsor crafting recipes
+   - Confirm reading Tech Junkie Vol 6 accelearates charging
+   - Verify Baton Master perk (Intellect Mastery) makes weapon always charged
+   - Verify Electrocutioner extends stun/ragdoll duration
